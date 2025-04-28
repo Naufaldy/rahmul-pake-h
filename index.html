@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Congrats UTBK 🎉</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('background.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+      padding: 50px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+    }
+    img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #ffffff;
+      margin-bottom: 20px;
+      background: #ffffff;
+    }
+    button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #e60000;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 1.5em;
+      color: #00ff99;
+    }
+    audio {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>SELAMAT KELAR UTBK! 🎉</h1>
+
+  <!-- Foto Temen -->
+  <img src="foto-temen.jpeg" alt="Foto Temen Kamu">
+
+  <p>Waktunya rebahan, makan enak, nonton drakor, dan tidur sampe puas! 🍕🎮🛌</p>
+
+  <button onclick="showResult()">Lihat Ramalan Nasibmu 🔮</button>
+
+  <div id="result"></div>
+
+  <!-- Musik Lokal -->
+  <audio controls autoplay loop>
+    <source src="musik-lokal.mp3" type="audio/mpeg">
+    Browser kamu tidak support audio, upgrade dikit dong 😆
+  </audio>
+
+  <script>
+    function showResult() {
+      const hasil = [
+        "🔥 Lulus PTN impian, siap bersinar!",
+        "🌟 Gapapa, rejeki nggak kemana!",
+        "🚀 Tahun ini mungkin belum, tapi tahun depan JEBOL!",
+        "🍔 Saatnya healing maksimal sambil nunggu pengumuman!",
+        "😎 Mau hasil apapun, kamu tetep keren!"
+      ];
+      const randomHasil = hasil[Math.floor(Math.random() * hasil.length)];
+      document.getElementById("result").innerText = randomHasil;
+    }
+  </script>
+
+</body>
+</html>
